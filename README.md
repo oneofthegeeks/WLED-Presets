@@ -13,5 +13,5 @@ Presets, playlists and a sunset-based schedule for 8 LED hoops in a row on a WLE
 | 31 | **Halloween Show** playlist | 32 | Preview All (once, then Ambient) |
 | 40 | Lights Off | | |
 
-Schedule (Oct 1 – Nov 1): sunset −15m Ambient → sunset +30m Show → 10:00pm Ambient → 11:30pm off.
+Schedule (Oct 1 – Nov 1): sunset −15m Ambient → sunset +30m Show → 10:30pm off.
 Halloween night (Oct 31): Show from sunset −30m straight through to 11:30pm off.
