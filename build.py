@@ -11,7 +11,7 @@ from pathlib import Path
 ROOT = Path(__file__).parent
 HOOPS, HOOP_LEN = 8, 46  # address order == left-to-right on the lawn
 TOTAL = HOOPS * HOOP_LEN  # 368, matches the LED bus length
-BRI = 160  # power limiter caps at 850mA anyway
+BRI = 160  # power limiter (8500mA) dims further if a look would exceed it
 
 ORANGE, PURPLE, GREEN = [255, 72, 0], [110, 0, 255], [50, 255, 0]
 RED, WHITE, BLACK = [255, 0, 0], [255, 255, 255], [0, 0, 0]
