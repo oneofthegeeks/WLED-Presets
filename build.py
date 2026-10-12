@@ -22,7 +22,7 @@ DIM_PURPLE = [60, 0, 90]  # ~[5,0,12] after gamma; [15,0,30] came out black
 # effect / palette IDs on 16.0.1
 FX = dict(breathe=2, colorwaves=67, candle_multi=102, twinklefox=80,
           eyes=82, lightning=57, meteor=76, fire2012=66, drip=96)
-PAL_DEFAULT, PAL_COLORS_ONLY, PAL_FIRE = 0, 5, 35
+PAL_DEFAULT, PAL_COLOR_1, PAL_COLORS_ONLY, PAL_FIRE = 0, 2, 5, 35
 
 
 def hoop(i, **fx):
@@ -58,8 +58,10 @@ looks = {
         fx=FX["twinklefox"], sx=60, ix=180, pal=PAL_COLORS_ONLY,
         col=[PURPLE, GREEN, ORANGE]))),
     # --- show (punchy) ---
+    # eye size comes from segment length (46 LEDs -> 1-LED eyes); grp=3 makes them 3 LEDs wide.
+    # sx = eye-off time (sx*128ms..2x), ix = max eye-on time (ix*64ms)
     20: look("Halloween Eyes", each(lambda i: dict(
-        fx=FX["eyes"], sx=128, ix=128, pal=PAL_DEFAULT,
+        fx=FX["eyes"], sx=20, ix=200, pal=PAL_COLOR_1, grp=3,
         col=[alt(RED, GREEN)(i), BLACK, BLACK])), transition=5),
     21: look("Lightning Storm", each(lambda i: dict(
         fx=FX["lightning"], sx=120 + i * 15, ix=100 + i * 10, pal=PAL_DEFAULT,  # staggered so hoops flash independently
