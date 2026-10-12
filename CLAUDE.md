@@ -38,6 +38,6 @@ ssh poppy "curl -s -X POST -H 'Content-Type: application/json' --data-binary @- 
 - Boot preset is 3 "Blend Taylor" — if its segments drift, every reboot reapplies the drift.
 - Timers on 16.x: hour 254 = sunset, 255 = sunrise, `min` = ± offset. Needs NTP on + lat/long
   (set to Holladay, UT 40.67/-111.82, TZ index 6 = US Mountain — don't reset to defaults).
-- 12 V strip, 10 A PSU: limiter `hw.led.maxpwr` = 8500 mA (85%), per-LED estimate 30 mA (WLED's 12 V
+- 12 V strip, 18 A PSU: limiter `hw.led.maxpwr` = 15000 mA (~85%; strip max is ~11 A so it rarely bites), per-LED estimate 30 mA (WLED's 12 V
   value). POSTing `hw.led` to `/json/cfg` resets omitted `rgbwm`/`cb`/`fps` to defaults — send them too.
 - Playlist `dur`/`transition` are tenths of a second.
