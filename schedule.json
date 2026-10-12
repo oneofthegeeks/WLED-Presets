@@ -1,0 +1,9 @@
+{
+  "if": {"ntp": {"en": true, "host": "0.wled.pool.ntp.org", "tz": 6, "offset": 0, "ampm": true, "ln": -111.82, "lt": 40.67}},
+  "timers": {"ins": [
+    {"en": 1, "hour": 254, "min": -15, "macro": 30, "dow": 127, "start": {"mon": 10, "day": 1}, "end": {"mon": 11, "day": 1}},
+    {"en": 1, "hour": 254, "min": 30,  "macro": 31, "dow": 127, "start": {"mon": 10, "day": 1}, "end": {"mon": 11, "day": 1}},
+    {"en": 1, "hour": 21,  "min": 0,   "macro": 30, "dow": 127, "start": {"mon": 10, "day": 1}, "end": {"mon": 11, "day": 1}},
+    {"en": 1, "hour": 23,  "min": 30,  "macro": 40, "dow": 127, "start": {"mon": 10, "day": 1}, "end": {"mon": 11, "day": 1}}
+  ]}
+}
