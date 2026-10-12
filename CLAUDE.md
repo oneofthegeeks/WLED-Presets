@@ -41,3 +41,5 @@ ssh poppy "curl -s -X POST -H 'Content-Type: application/json' --data-binary @- 
 - 12 V strip, 18 A PSU: limiter `hw.led.maxpwr` = 15000 mA (~85%; strip max is ~11 A so it rarely bites), per-LED estimate 30 mA (WLED's 12 V
   value). POSTing `hw.led` to `/json/cfg` resets omitted `rgbwm`/`cb`/`fps` to defaults — send them too.
 - Playlist `dur`/`transition` are tenths of a second.
+- Color gamma is 2.8 and color order RGB (verified by eye). Mid RGB values get crushed, so colors in
+  `build.py` are pre-boosted (orange 255,130,0 not 255,72,0) — check new colors on the hoops.

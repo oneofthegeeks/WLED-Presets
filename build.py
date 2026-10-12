@@ -13,9 +13,11 @@ HOOPS, HOOP_LEN = 8, 46  # address order == left-to-right on the lawn
 TOTAL = HOOPS * HOOP_LEN  # 368, matches the LED bus length
 BRI = 160  # power limiter (15000mA) dims further if a look would exceed it
 
-ORANGE, PURPLE, GREEN = [255, 72, 0], [110, 0, 255], [50, 255, 0]
+# Controller applies gamma 2.8, which crushes mid values (72 -> 5), so these are pre-boosted.
+# Orange/purple confirmed by eye on the hoops 2026-10-11.
+ORANGE, PURPLE, GREEN = [255, 130, 0], [175, 0, 255], [50, 255, 0]
 RED, WHITE, BLACK = [255, 0, 0], [255, 255, 255], [0, 0, 0]
-DIM_PURPLE = [15, 0, 30]
+DIM_PURPLE = [60, 0, 90]  # ~[5,0,12] after gamma; [15,0,30] came out black
 
 # effect / palette IDs on 16.0.1
 FX = dict(breathe=2, colorwaves=67, candle_multi=102, twinklefox=80,
